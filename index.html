@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ファイルダウンロードページ</title>
+</head>
+<body>
+    <h1>ファイルダウンロード</h1>
+    <button id="downloadButton">ダウンロード</button>
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            var link = document.createElement('a');
+            link.href = 'https://github.com/yudouhu384/econ1/raw/main/econ1.zip';
+            link.download = 'econ1.zip';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>
